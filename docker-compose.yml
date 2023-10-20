@@ -4,7 +4,7 @@ services:
     image: 'docker-spring-boot-postgres:latest'
     build:
       context: /
-      dockerfile: Dockerfile
+      dockerfile: .docker/Dockerfile
     container_name: back
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/jwt_security
@@ -20,7 +20,7 @@ services:
     restart: always
     build:
       context: /
-      dockerfile: Dockerfile.development
+      dockerfile: .docker/Dockerfile.development
 
     ports:
       - "5432:5432"
