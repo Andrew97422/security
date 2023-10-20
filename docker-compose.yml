@@ -3,6 +3,7 @@ services:
   back:
     image: 'docker-spring-boot-postgres:latest'
     build:
+      context: /
       dockerfile: ./Dockerfile
     container_name: back
     environment:
