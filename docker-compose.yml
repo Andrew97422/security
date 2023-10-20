@@ -1,0 +1,13 @@
+version: '3'
+services:
+  back:
+    image: 'docker-spring-boot-postgres:latest'
+    build:
+      dockerfile: ./Dockerfile
+    container_name: back
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/bigdata
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=123
+    ports:
+      - "8081:8081"
