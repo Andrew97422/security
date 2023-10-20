@@ -1,4 +1,4 @@
-FROM maven:3.8.4-openjdk-19 as build
+FROM maven:3.8.4-openjdk-17 as build
 
 COPY ./target/*.jar application.jar
 EXPOSE 8081
